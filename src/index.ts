@@ -6,6 +6,7 @@ import cors from 'cors';
 import sampleRoute from './routes/sampleRoute';
 import compression from 'compression';
 import httpsRedirect from 'express-https-redirect';
+import MqttMiddleware from './middlewares/mqtt';
 
 const app = express();
 const { port } = Config;
@@ -16,16 +17,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use('/', httpsRedirect());
 
-// Endpoints
-// ========================================
+/* ==== Endpoints ==== */
 app.get('/', (req, res) => {
   res.json({ status: 'ok', version: process.env.npm_package_version });
 });
 
 app.use('/api/sample', sampleRoute);
 
-// Server
-// ========================================
+/* ==== Server ==== */
 app.listen(port, () => {
   Console.info(`Server listening on port ${port}`);
+
+  MqttMiddleware.run();
 });
