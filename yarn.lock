@@ -1215,6 +1215,11 @@ execa@^4.1.0:
     signal-exit "^3.0.2"
     strip-final-newline "^2.0.0"
 
+express-es6-template-engine@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/express-es6-template-engine/-/express-es6-template-engine-2.2.3.tgz#9e7ea2de2651595b9505726c8164e876d6c5c55b"
+  integrity sha512-YArtrydeVPURRC7Ov+8HiwsmyBRvBdKkTpRjQd9CcvruckR8ts2dU0QqfLt05Yqc8PuHME45HGvumdZM+jzFxQ==
+
 express-https-redirect@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/express-https-redirect/-/express-https-redirect-1.0.0.tgz#d97bbb382cb428dcd8125710dcfc563a645c48e0"
